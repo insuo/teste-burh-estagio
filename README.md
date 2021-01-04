@@ -54,3 +54,5 @@ Para cada um dos filmes, devem ser mostrados dados básicos nessa lista, como no
 * Alcance dos objetivos propostos
 * Adaptação mobile (layout responsivo)
 * Componentização e extensibilidade dos componentes
+
+Boa sorte!
