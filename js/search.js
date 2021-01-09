@@ -16,7 +16,9 @@ const type = document.querySelector('.type');
 const year = document.querySelector('.year');
 const plot = document.querySelector('.plot');
 
-var url;
+const key = 'c17838bb';
+
+var req;
 var detailedMovie;
 var list;
 
@@ -47,28 +49,32 @@ let target = e.target.value
   }
 
   if (e.target.value != null && $(".search").hasClass("searching")) {
-    url = "http://www.omdbapi.com/?apikey=c17838bb&s=" + target;
+    req = "http://www.omdbapi.com/?apikey=" + key + "&t=" + target;
 
-    $.getJSON(url, function (data) {
-      list = data.Search;
+    $.ajax({
+      method: "GET",
+      url: req,
+      success: function(data){
+        list = data.Search;
 
-      if (list != undefined) {
-        list.forEach(function (item, index) {
-          if (item.Poster != "N/A" && item.Type == "movie") {
-            let image = document.createElement("img");
-            image.classList.add("img");
-            image.src = item.Poster;
-            image.id = index;
-            image.onclick = openPoster;
-            wrapper.appendChild(image);
-          }
-        });
-      } else {
-        $(".search").removeClass("searching");
-        alert("Não encontramos um filme com este nome.");
-        target = null;
+        if (list != undefined) {
+          list.forEach(function (item, index) {
+            if (item.Poster != "N/A" && item.Type == "movie") {
+              let image = document.createElement("img");
+              image.classList.add("img");
+              image.src = item.Poster;
+              image.id = index;
+              image.onclick = openPoster;
+              wrapper.appendChild(image);
+            }
+          });
+        } else {
+          $(".search").removeClass("searching");
+          // alert("Não encontramos um filme com este nome.");
+          target = null;
+        }
       }
-    });
+    })
   }
 }
 
