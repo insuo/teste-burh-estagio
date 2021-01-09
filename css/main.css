@@ -177,19 +177,6 @@ h2 {
   .wrapper > img {
     width: 70%;
   }
-
-  .search {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .aux {
-    align-items: center;
-  }
-
-  h1 {
-    display: inline;
-  }
 }
 
 @media only screen and (max-width: 500px) {
