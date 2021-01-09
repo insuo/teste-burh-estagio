@@ -49,12 +49,13 @@ let target = e.target.value
   }
 
   if (e.target.value != null && $(".search").hasClass("searching")) {
-    req = "http://www.omdbapi.com/?apikey=" + key + "&t=" + target;
+    req = "http://www.omdbapi.com/?apikey=" + key + "&s=" + target + "&r=json";
 
     $.ajax({
       method: "GET",
       url: req,
       success: function(data){
+        console.log(data)
         list = data.Search;
 
         if (list != undefined) {
