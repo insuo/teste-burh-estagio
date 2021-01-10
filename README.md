@@ -1,3 +1,13 @@
+
+Eu subi o projeto para a web, mas infelizmente estou tendo problemas com requisição https, então para funcionamento será preciso baixar o projeto e abrir o html manualmente.
+https://teste-burh-estagio.vercel.app
+
+
+
+
+
+
+
 # BURH: Teste prático para Frontend
 
 Este será o teste usado para avaliar os candidatos a vaga de estágio para frontend da [Burh](http://burh.com.br). Se você estiver participando de um processo seletivo para nossa equipe, certamente em algum momento receberá este link, mas caso você tenha chego aqui "por acaso", sinta-se convidado a desenvolver nosso teste e enviar uma mensagem para nós no e-mail `jorge@burh.com.br`. 
